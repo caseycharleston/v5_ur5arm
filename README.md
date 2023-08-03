@@ -9,10 +9,9 @@ Follow the [install](https://github.com/utexas-bwi/bwi-docker#install) and [setu
 Once installed, navigate to the bwi-docker projects folder and download the arm package into your workspace:
 ```
 cd projects
-mkdir -p catkin_ws/src // if you have not done so already
+mkdir -p catkin_ws/src
 cd catkin_ws/src
 git clone https://github.com/caseycharleston/v5_ur5arm.git
-
 ```
 
 # Dependencies
