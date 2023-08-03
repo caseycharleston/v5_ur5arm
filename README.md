@@ -23,6 +23,27 @@ cd path/to/catkin_ws/src
 git clone https://github.com/filesmuggler/robotiq.git
 ```
 
+Once installed, there is one edit you need to make before running. Navigate to the `robotiq_85_gripper.transmission.xacro` file and do the following:
+1. uncomment lines 10 and 15
+2. comment lines 9 and 14
+
+So it resembles this (lines 6 - 17):
+```
+    <transmission name="${prefix}robotiq_85_left_knuckle_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${prefix}robotiq_85_left_knuckle_joint">
+        <!-- <hardwareInterface>PositionJointInterface</hardwareInterface> -->
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="${prefix}robotiq_85_left_knuckle_motor">
+        <mechanicalReduction>1</mechanicalReduction>
+        <!-- <hardwareInterface>PositionJointInterface</hardwareInterface> -->
+        <hardwareInterface>EfforJointInterface</hardwareInterface>
+      </actuator>
+    </transmission>
+```
+This will put the gripper's primary joint on the correct interface so it can be used for simulation.
+
 # Building
 
 Building this package requires the use of the bwi-docker bash tools. For descriptions of their usage, see the bwi-docker [usage](https://github.com/utexas-bwi/bwi-docker#usage) section.
