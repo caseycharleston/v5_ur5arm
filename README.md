@@ -23,7 +23,7 @@ cd path/to/catkin_ws/src
 git clone https://github.com/filesmuggler/robotiq.git
 ```
 
-Once installed, there is one edit you need to make before running. Navigate to the `robotiq_85_gripper.transmission.xacro` file and do the following:
+Once installed, there is one edit you need to make before running. Navigate to the `robotiq_85_gripper.transmission.xacro` in `robotiq/robotiq_description/urdf` file and do the following:
 1. uncomment lines 10 and 15
 2. comment lines 9 and 14
 
