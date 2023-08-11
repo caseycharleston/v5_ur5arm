@@ -61,7 +61,7 @@ root@root:~/projects/catkin_ws$ catkin_make
 
 # Testing
 
-To ensure that the the package was installed successfully, run the gazebo demo launch file within the `ur5_moveit_config` package. Before running this, make sure you first do the building instructions in the previous seciton.
+To ensure that the the package was installed successfully, run the gazebo demo launch file within the `ur5_moveit_config` package. Before running this, make sure you first do the building instructions in the previous section.
 ```console
 root@root:~/projects/catkin_ws$ source devel/setup.bash
 root@root:~/projects/catkin_ws$ roslaunch ur5_moveit_config demo_gazebo.launch
